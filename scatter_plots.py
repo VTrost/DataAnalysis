@@ -13,7 +13,7 @@ import os.path
 ##  variable      ~ string  ~ name, as listed in the data file, of the variable to be plotted (e.g. TdegK)
 ##  variableName  ~ string  ~ name for identifying variable being plotted (may be different to the name used in the data file) (e.g. temperature)
 ##  x_label       ~ string  ~ text for the x-axis label (e.g. "Temperature [K]")
-##  flag          ~ boolean ~ when true x-axis tick values will be written in scientifc notation; when false x-axis tuck values will use default formatting
+##  flag          ~ boolean ~ when true x-axis tick values will be written in scientific notation; when false x-axis tick values will use default formatting
 ##  convertFactor ~ double  ~ value to multiply the data by before plotting (used for unit conversions)
 ## Outputs:
 ## Png files of data plots saved to spath which is currently hardcoded.
@@ -92,6 +92,7 @@ def scatter_plots(flightNum,fname,runID,timeIndex,variable,variableName,x_label,
 ##  keep_all_flag      ~ boolean ~ flag indicating whether to keep all existing files
 ## Output:
 ##  returns True if the plot in question should be produced and False if the plot should not be produced
+
 def checkForFile(flightNum,runID,variableName,run_all_flag,rewrite_all_flag,keep_all_flag):
     spath = "/home/vtrost/Documents/PhD/MONC_MAC_2020/"+flightNum+"/Plots/"
     
